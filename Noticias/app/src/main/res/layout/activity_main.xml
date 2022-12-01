@@ -21,42 +21,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Favoritas"
+                android:text="Ultimas Noticias"
                 android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Todas"
+                android:text="Desporto"
                 android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Mundo"
+                android:text="Economia"
                 android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Carros"
+                android:text="Mundo"
                 android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ciência"
-                android:layout_margin="5dp"/>
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Política"
+                android:text="Politica"
                 android:layout_margin="5dp"/>
         </LinearLayout>
     </HorizontalScrollView>
