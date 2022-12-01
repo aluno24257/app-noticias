@@ -51,6 +51,42 @@
                 android:layout_weight="1"
                 android:text="Politica"
                 android:layout_margin="5dp"/>
+
+
         </LinearLayout>
     </HorizontalScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="7dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/cardview_default_elevation"></androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img"
+                android:transitionName="img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:ignore="UnusedAtTribute" />
+
+
+
+            ></RelativeLayout>
+
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
