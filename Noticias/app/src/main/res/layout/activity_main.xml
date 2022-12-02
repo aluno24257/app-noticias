@@ -68,23 +68,26 @@
             android:layout_marginRight="11dp"
             android:layout_marginBottom="7dp"
             app:cardCornerRadius="10dp"
-            app:cardElevation="@dimen/cardview_default_elevation"></androidx.cardview.widget.CardView>
+            app:cardElevation="@dimen/cardview_default_elevation">
 
-        <RelativeLayout
+          <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/img"
-                android:transitionName="img"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:ignore="UnusedAtTribute" />
+              <ImageView
+                  android:id="@+id/img"
+                  android:layout_width="match_parent"
+                  android:layout_height="200dp"
+                  android:ignore="UnusedAtTribute"
+                  android:scaleType="centerCrop"
+                  android:transitionName="img" />
+
+
+              ></RelativeLayout>
 
 
 
-            ></RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
 
     </FrameLayout>
