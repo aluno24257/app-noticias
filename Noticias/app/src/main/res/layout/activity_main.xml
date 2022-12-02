@@ -9,48 +9,56 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="-32dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Ultimas Noticias"
-                android:layout_margin="5dp"/>
+                android:text="Ultimas Noticias" />
+
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Desporto"
-                android:layout_margin="5dp"/>
+                android:text="Desporto" />
+
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Economia"
-                android:layout_margin="5dp"/>
+                android:text="Economia" />
+
             <Button
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Mundo"
-                android:layout_margin="5dp"/>
+                android:text="Mundo" />
+
             <Button
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Politica"
-                android:layout_margin="5dp"/>
+                android:text="Politica" />
+
+
 
 
         </LinearLayout>
@@ -64,27 +72,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="70dp"
             android:layout_marginRight="11dp"
             android:layout_marginBottom="7dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="@dimen/cardview_default_elevation">
 
-          <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-              <ImageView
-                  android:id="@+id/img"
-                  android:layout_width="match_parent"
-                  android:layout_height="200dp"
-                  android:ignore="UnusedAtTribute"
-                  android:scaleType="centerCrop"
-                  android:transitionName="img" />
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:ignore="UnusedAtTribute"/>
+                
+                <ImageView
+                    android:layout_width=""
+                    android:layout_height=""
 
 
-              ></RelativeLayout>
-
+                
+            </RelativeLayout>
 
 
         </androidx.cardview.widget.CardView>
