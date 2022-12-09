@@ -9,8 +9,8 @@
         android:orderInCategory="100"
         android:title="Search"
         android:icon="@drawable/ic_search"
-        app:showAsAction="always"
-        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
         />
 
 

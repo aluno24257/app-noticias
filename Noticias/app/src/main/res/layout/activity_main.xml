@@ -92,16 +92,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_alignBottom="@id/img"
-                    android:layout_marginBottom="67dp"
+                    android:layout_marginBottom="112dp"
                     android:src="@drawable/bottom_shadow" />
 
                 <TextView
                     android:id="@+id/tituloTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingEnd="16dp"
                     android:paddingStart="16dp"
-                    android:paddingTop="24dp"
+                    android:paddingTop="100dp"
+                    android:paddingEnd="16dp"
                     android:text="@string/app_name"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="24sp" />
@@ -110,10 +110,10 @@
                     android:id="@+id/descripcionTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="16dp"
-                    android:paddingEnd="16dp"
                     android:paddingStart="16dp"
-                    android:paddingTop="4dp"
+                    android:paddingTop="140dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
                     android:text="@string/app_name"
                     android:textColor="@color/colorSecondaryText"
                     android:textSize="14sp" />
