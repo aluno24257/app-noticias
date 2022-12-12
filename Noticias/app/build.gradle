@@ -46,5 +46,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'
 
     //Gson
-    implementation 'com.squareup.retrofit2:converter-gson:2.1.0   '
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0 z  '
 }
