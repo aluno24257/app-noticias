@@ -18,6 +18,15 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/userId"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="User Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
             <Button
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
@@ -105,14 +114,17 @@
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="24sp" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerview_users"
-                    android:layout_width= "409dp"
-                    android:layout_height= "729dp"
-                    app:layout_constraintBottom_toBottomOf ="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:id="@+id/txtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="140dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="14sp" />
 
 
             </RelativeLayout>
@@ -124,7 +136,3 @@
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
