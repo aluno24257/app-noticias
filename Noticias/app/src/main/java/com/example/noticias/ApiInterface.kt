@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface ApiInterface {
     @GET ("posts")
-    fun getData(): Call<List<UltimasNoticias>>
+    fun getData(): Call<List<Item>>
 }

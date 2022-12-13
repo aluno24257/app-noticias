@@ -2,15 +2,14 @@ package com.example.noticias
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.telecom.Call
-import android.util.Log
 import android.util.Log.d
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import kotlin.coroutines.jvm.internal.CompletedContinuation.context
+
 
 const val BASE_URL = "https://jsonplace.typicode.com/"
 class MainActivity : AppCompatActivity() {
@@ -25,13 +24,9 @@ class MainActivity : AppCompatActivity() {
 
 
         recyclerview_users.setHasFixedSize(true)
-        linearLayoutManager= LinearLayoutManager:this
+        linearLayoutManager = LinearLayoutManager(this)
 
         getMyData()
-    }
-
-    private fun linearLayoutManager(context: CoroutineContext): LinearLayoutManager {
-
     }
 
     private fun getMyData() {
@@ -43,10 +38,10 @@ class MainActivity : AppCompatActivity() {
 
         val retrofitData = retrofitBuilder.getData()
 
-        retrofitData.enqueue(object : Callback<List<UltimasNoticias>?> {
+        retrofitData.enqueue(object : Callback<List<Item>?> {
             override fun onResponse(
-                call: retrofit2.Call<List<UltimasNoticias>?>,
-                response: Response<List<UltimasNoticias>?>
+                call: retrofit2.Call<List<Item>?>,
+                response: Response<List<Item>?>
             ) {
                 val responseBody = response.body()!!
 
@@ -55,8 +50,9 @@ class MainActivity : AppCompatActivity() {
                 recyclerview_users.adapter = myAdapter
             }
 
-            override fun onFailure(call: retrofit2.Call<List<UltimasNoticias>?>, t: Throwable) {
+            override fun onFailure(call: retrofit2.Call<List<Item>?>, t: Throwable) {
                 d("MainActivity", "onFailure : " + t.message)
             }
         })
     }
+}

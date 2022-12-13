@@ -6,29 +6,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Recycler
-import org.w3c.dom.Text
+import kotlinx.android.synthetic.main.row_items.view.*
 
-class MyAdapter (val context: Context, val userList: List<UltimasNoticias>): RecyclerView.Adapter<MyAdapter.viewHolder>() {
-    class viewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+class MyAdapter (val context: Context, val userList: List<Item>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     var userId: TextView
     var title: TextView
 
     init {
-        userId = itemView.userId
-        title = itemView.title
+        userId = itemView.Title
+        title = itemView.Description
     }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-        var attachToRoot = false
-        var itemView = LayoutInflater.from(context).inflate(R.layout.row_items, parent, attachToRoot : false )
-        return RecyclerView.ViewHolder(itemView)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        var itemView = LayoutInflater.from(context).inflate(R.layout.row_items,parent,false)
+        return ViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: viewHolder, position: Int) {
-        holder.userId.text = userList[position].userId.toString()
-        holder.title.text = userList[position].title
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.userId.text = userList[position].title
+        holder.title.text = userList[position].description
     }
 
     override fun getItemCount(): Int {
