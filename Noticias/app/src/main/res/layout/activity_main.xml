@@ -88,7 +88,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:layout_alignBottom="@id/img"
-                            android:src="@drawable/bottom_shadow" />
+                            />
 
 
                     </RelativeLayout>
