@@ -23,9 +23,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         recyclerview_users.serHasFixed.Size(true)
-        linearLayoutManager = linearLayoutManager (context:this)
+        linearLayoutManager = LinearLayoutManager (context:this)
 
         getMyData()
+    }
+
+    private fun linearLayoutManager(context: CoroutineContext): LinearLayoutManager {
+
     }
 
     private fun getMyData() {
