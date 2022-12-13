@@ -11,14 +11,30 @@ class MainActivity : AppCompatActivity() {
         getUltimasNoticias();
     }
 
-    private fun getUltimasNoticias() {
+    private fun getMyData() {
         val retrofitBuilder = Retrofit.Buldier()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
             .build()
             .create(ApiInterface::class.java)
 
-        val retrofitData = retrofitBuilder
+        val retrofitData = retrofitBuilder.getData()
+
+        retrofitData.enqueue(object : Callback<List<MyDataItem>?>) {
+            override fun onResponse(
+                call: Call<List<MyDataItem>?>,
+                response: Response<List<MyDataItem>?>)
+            {
+                val responseBody = response.body()!!
+                val myStringBuilder = StringBuilder()
+                for (myData in responseBody){
+                    myStringBuilder.append(myData.id)
+                    myStringBuilder.append("\n")
+                }
+            }
+        }
+            override fun onFailure(call: Call<List<MyDataItem>?>, t: throwable){
+        }
     }
 
 }
