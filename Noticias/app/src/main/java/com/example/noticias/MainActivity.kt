@@ -2,6 +2,11 @@ package com.example.noticias
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.telecom.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 const val BASE_URL = "https://jsonplace.typicode.com/"
 class MainActivity : AppCompatActivity() {
@@ -12,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getMyData() {
-        val retrofitBuilder = Retrofit.Buldier()
+        val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
             .build()
@@ -20,10 +25,11 @@ class MainActivity : AppCompatActivity() {
 
         val retrofitData = retrofitBuilder.getData()
 
-        retrofitData.enqueue(object : Callback<List<MyDataItem>?>) {
+        retrofitData.enqueue(object : Callback<List<UltimasNoticias>?>) {
             override fun onResponse(
-                call: Call<List<MyDataItem>?>,
-                response: Response<List<MyDataItem>?>)
+                call: Call<List<UltimasNoticias>?>,
+                    response: Response<List<UltimasNoticias>?>
+            )
             {
                 val responseBody = response.body()!!
                 val myStringBuilder = StringBuilder()
@@ -31,9 +37,10 @@ class MainActivity : AppCompatActivity() {
                     myStringBuilder.append(myData.id)
                     myStringBuilder.append("\n")
                 }
+
             }
         }
-            override fun onFailure(call: Call<List<MyDataItem>?>, t: throwable){
+            override fun onFailure(call: Call<List<UltimasNoticias>?>, t: throwable){
         }
     }
 

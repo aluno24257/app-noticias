@@ -1,9 +1,9 @@
 package com.example.noticias
 
 import retrofit2.Call
+import retrofit2.http.GET
 
 interface ApiInterface {
-
-    @Get( value:"posts")
+    @GET ("posts")
     fun getData(): Call<List<UltimasNoticias>>
 }
