@@ -22,7 +22,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerview_users.serHasFixed.Size(true)
+
+
+        recyclerview_users.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager (context:this)
 
         getMyData()
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             ) {
                 val responseBody = response.body()!!
 
-                myAdapter = myAdapter(baseContext, responseBody)
+                myAdapter = MyAdapter(baseContext, responseBody)
                 myAdapter.notifyDataSetChanged()
                 recyclerview_users.adapter = myAdapter
             }
