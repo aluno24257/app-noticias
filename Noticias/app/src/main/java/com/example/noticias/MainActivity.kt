@@ -11,7 +11,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-const val BASE_URL = "https://jsonplace.typicode.com/"
+const val BASE_URL = "https://azurefunction24268.azurewebsites.net/"
 class MainActivity : AppCompatActivity() {
 
     lateinit var myAdapter: MyAdapter
@@ -21,10 +21,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         recyclerview_users.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(this)
+        recyclerview_users.layoutManager = linearLayoutManager
 
         getMyData()
     }

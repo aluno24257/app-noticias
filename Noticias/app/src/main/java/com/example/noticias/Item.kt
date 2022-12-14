@@ -2,7 +2,7 @@ package com.example.noticias
 
 data class Item(
     val author: String,
-    val categories: List<String>,
+    val categories: String,
     val content: String,
     val description: String,
     val enclosure: Enclosure,
